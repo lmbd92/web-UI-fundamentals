@@ -1,0 +1,37 @@
+// -----------------------------------------------------------------------------
+// Mapas de temas
+// -----------------------------------------------------------------------------
+$light-theme: (
+    primary-color: #00bcd4,
+    primary-hover-color: #0097a7,
+    secondary-hover-color:#ff9800,
+    text-dark: #333333,
+    card-bg: #ffffff,
+    description-bg: #f0f9fa,
+    border-color: #e0e0e0,
+    shadow-color: rgba(0, 0, 0, .1),
+    shadow-hover-color: rgba(0, 0, 0, .2),
+    radius: 12px
+);
+
+$dark-theme: (
+    primary-color: #4dd0e1,
+    primary-hover-color: #00acc1,
+    secondary-hover-color:#ff9800,
+    text-dark: #f0f0f0,
+    card-bg: #1e1e1e,
+    description-bg: #2b2b2b,
+    border-color: #444,
+    shadow-color: rgba(0, 0, 0, .4),
+    shadow-hover-color: rgba(0, 0, 0, .6),
+    radius: 12px
+);
+
+// -----------------------------------------------------------------------------
+// Mixin para generar variables CSS a partir de un mapa
+// -----------------------------------------------------------------------------
+@mixin theme-variables($theme-map) {
+    @each $prop, $val in $theme-map {
+        --#{$prop}: #{$val}; /* This code line creates a variable for every key-value pair in the $theme-map */
+    }
+}

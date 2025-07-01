@@ -1,0 +1,64 @@
+// -----------------------------------------------------------------------------
+// Placeholder con estilos base de tarjeta
+// -----------------------------------------------------------------------------
+%card-base {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: var(--card-bg);
+    color: var(--primary-color);
+    font-family: "Segoe UI", sans-serif;
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 8px var(--shadow-color);
+
+    padding: 1.5rem;
+    margin: 20px;
+    width: 350px;
+
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card {
+    @extend %card-base;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px var(--shadow-hover-color);
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+
+    &__button {
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: var(--secondary-hover-color);
+            color: var(--text-dark);
+        }
+    }
+
+    p:first-of-type {
+        font-style: italic;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        border-radius: var(--radius);
+        margin-bottom: 1rem;
+    }
+
+    &__description {
+        margin: 1rem 0;
+    }
+}

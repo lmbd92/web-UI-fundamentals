@@ -1,0 +1,113 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Variables globales */
+:root {
+  --primary-color: #00bcd4;
+  --primary-hover-color: #0097a7;
+  --secondary-hover-color: #ff9800;
+  --text-dark: #333333;
+  --card-bg: #ffffff;
+  --description-bg: #f0f9fa;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-hover-color: rgba(0, 0, 0, 0.2);
+  --radius: 12px;
+}
+
+body.dark-theme {
+  --primary-color: #4dd0e1;
+  --primary-hover-color: #00acc1;
+  --text-dark: #f0f0f0;
+  --card-bg: #1e1e1e;
+  --description-bg: #2b2b2b;
+  --border-color: #444;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --shadow-hover-color: rgba(0, 0, 0, 0.6);
+  background-color: #121212;
+  color: var(--text-dark);
+}
+
+#theme-toggle {
+  background: none;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+/* Estilo de la tarjeta */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: var(--card-bg);
+  color: var(--primary-color);
+  font-family: "Segoe UI", sans-serif;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  padding: 1.5rem;
+  margin: 20px;
+  width: 350px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--shadow-hover-color);
+}
+
+.card__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.card__button {
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.card__button:hover {
+  background-color: var(--secondary-hover-color);
+  color: var(--text-dark);
+}
+
+.card p:first-of-type {
+  font-style: italic;
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+.card__description {
+  margin: 1rem 0;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .card__title {
+    font-size: 1.2rem;
+  }
+
+  .card__button {
+    font-size: 0.9rem;
+  }
+}

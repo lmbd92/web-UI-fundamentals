@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--card-bg);
+  color: var(--primary-color);
+  font-family: "Segoe UI", sans-serif;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  padding: 1.5rem;
+  margin: 20px;
+  width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--shadow-hover-color);
+}
+.card__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+.card__button {
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.card__button:hover {
+  background-color: var(--secondary-hover-color);
+  color: var(--text-dark);
+}
+.card p:first-of-type {
+  font-style: italic;
+}
+.card__image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+.card__description {
+  margin: 1rem 0;
+}
+
+:root {
+  --primary-color: #00bcd4; /* This code line creates a variable for every key-value pair in the $theme-map */
+  --primary-hover-color: #0097a7; /* This code line creates a variable for every key-value pair in the $theme-map */
+  --secondary-hover-color: #ff9800; /* This code line creates a variable for every key-value pair in the $theme-map */
+  --text-dark: #333333; /* This code line creates a variable for every key-value pair in the $theme-map */
+  --card-bg: #ffffff; /* This code line creates a variable for every key-value pair in the $theme-map */
+  --description-bg: #f0f9fa; /* This code line creates a variable for every key-value pair in the $theme-map */
+  --border-color: #e0e0e0; /* This code line creates a variable for every key-value pair in the $theme-map */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* This code line creates a variable for every key-value pair in the $theme-map */
+  --shadow-hover-color: rgba(0, 0, 0, 0.2); /* This code line creates a variable for every key-value pair in the $theme-map */
+  --radius: 12px; /* This code line creates a variable for every key-value pair in the $theme-map */
+}
+
+body.dark-theme {
+  --primary-color: #4dd0e1; /* This code line creates a variable for every key-value pair in the $theme-map */
+  --primary-hover-color: #00acc1; /* This code line creates a variable for every key-value pair in the $theme-map */
+  --secondary-hover-color: #ff9800; /* This code line creates a variable for every key-value pair in the $theme-map */
+  --text-dark: #f0f0f0; /* This code line creates a variable for every key-value pair in the $theme-map */
+  --card-bg: #1e1e1e; /* This code line creates a variable for every key-value pair in the $theme-map */
+  --description-bg: #2b2b2b; /* This code line creates a variable for every key-value pair in the $theme-map */
+  --border-color: #444; /* This code line creates a variable for every key-value pair in the $theme-map */
+  --shadow-color: rgba(0, 0, 0, 0.4); /* This code line creates a variable for every key-value pair in the $theme-map */
+  --shadow-hover-color: rgba(0, 0, 0, 0.6); /* This code line creates a variable for every key-value pair in the $theme-map */
+  --radius: 12px; /* This code line creates a variable for every key-value pair in the $theme-map */
+  background-color: #121212;
+  color: var(--text-dark);
+}
+
+#theme-toggle {
+  background: none;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+    margin: 10px;
+  }
+  .card__title {
+    font-size: 1.2rem;
+  }
+  .card__button {
+    font-size: 0.9rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

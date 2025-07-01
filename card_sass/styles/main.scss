@@ -1,0 +1,50 @@
+// -----------------------------------------------------------------------------
+@use './reset';
+@use './variables' as vars;
+@use './card';
+
+// -----------------------------------------------------------------------------
+// Variables CSS para tema claro
+// -----------------------------------------------------------------------------
+:root {
+    @include vars.theme-variables(vars.$light-theme);
+}
+
+// -----------------------------------------------------------------------------
+// Overrides para tema oscuro
+// -----------------------------------------------------------------------------
+body.dark-theme {
+    @include vars.theme-variables(vars.$dark-theme);
+    background-color: #121212;
+    color: var(--text-dark);
+}
+
+// -----------------------------------------------------------------------------
+// Botón de alternar tema
+// -----------------------------------------------------------------------------
+#theme-toggle {
+    background: none;
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+// -----------------------------------------------------------------------------
+// Responsive
+// -----------------------------------------------------------------------------
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        margin: 10px;
+
+        &__title {
+            font-size: 1.2rem;
+        }
+
+        &__button {
+            font-size: 0.9rem;
+        }
+    }
+}
