@@ -1,0 +1,29 @@
+// base values (optionally you can continue using Sass vars)
+$color-bg-light: #ffffff;
+$color-bg-card-light: #e2dddd;
+$color-text-light: #333333;
+$color-primary-light: #ff4081;
+
+$color-bg-dark: #181717;
+$color-bg-card-dark: #6b5858;
+$color-text-dark: #f1f1f1;
+$color-primary-dark: #ff79b0;
+
+// Light theme by default
+:root {
+    --bg: #{$color-bg-light};
+    --bg-card: #{$color-bg-card-light};
+    --text: #{$color-text-light};
+    --primary: #{$color-primary-light};
+    --primary-dark: #e73370;
+    --radius: 12px;
+    --spacing: 1rem;
+}
+
+// Dark theme when we add the class 'dark-theme' to the body
+.dark-theme {
+    --bg: #{$color-bg-dark};
+    --bg-card: #{$color-bg-card-dark};
+    --text: #{$color-text-dark};
+    --primary: #{$color-primary-dark};
+}

@@ -1,0 +1,7 @@
+@import '../../../styles/variables';
+
+.text {
+    margin: 0 0 var(--spacing);
+    color: var(--text);
+    line-height: 1.4;
+}

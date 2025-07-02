@@ -1,0 +1,7 @@
+@import '../../../styles/variables';
+
+.title {
+    margin: var(--spacing) calc(0 + 0.5 * var(--spacing));
+    color: var(--primary);
+    font-size: 1.25rem;
+}

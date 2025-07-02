@@ -1,0 +1,9 @@
+@import './variables';
+
+// reset, typography, and base styles
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}

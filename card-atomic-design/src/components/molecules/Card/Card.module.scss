@@ -1,0 +1,18 @@
+@import '../../../styles/variables';
+
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    padding: var(--spacing);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}

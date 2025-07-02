@@ -1,0 +1,16 @@
+@import '../../../styles/variables';
+
+.btn {
+    padding: calc(0.5 * var(--spacing)) calc(1 * var(--spacing));
+    border: none;
+    border-radius: var(--radius);
+    background: var(--bg);
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: filter 0.2s;
+
+    &:hover {
+    background: var(--primary-dark);    
+    }
+}
